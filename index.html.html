@@ -17,7 +17,7 @@
         var url = 'http://developer.nrel.gov/api/energy_incentives/v2/dsire.json?api_key='+key+'&address='+address+'&technology='+tech;
         tableau.log(url)
         return url;
-        
+
     }
 
     var myConnector = tableau.makeConnector();
@@ -60,7 +60,7 @@
         });
 
     };
-    
+
     tableau.registerConnector(myConnector);
 
     $(document).ready(function () {
@@ -69,8 +69,8 @@
         var tech = document.getElementById("technologies").value;
         var key = document.getElementById("key").value;
         if (address,tech,key) {
-                    tableau.connectionData = address+","+tech+","+key; 
-                    tableau.connectionName = "Energy Incentives Search"; 
+                    tableau.connectionData = address+","+tech+","+key;
+                    tableau.connectionName = "EnergyIncentivesSearch";
                     tableau.submit();
                 };
         });
