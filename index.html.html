@@ -25,6 +25,7 @@
     myConnector.getSchema = function (schemaCallback) {
         var cols = [
             { id : "program_id", alias : "Program ID", dataType : tableau.dataTypeEnum.string },
+            { id : "category_name", alias : "Category Name", dataType : tableau.dataTypeEnum.string },
         ];
 
         var tableInfo = {
@@ -52,6 +53,8 @@
             for (var i = 0, len = feat.length; i < len; i++) {
                 tableData.push({
                     "program_id": feat[i].program_id,
+                    "category_name": feat[i].category_name
+
                 });
             }
 
