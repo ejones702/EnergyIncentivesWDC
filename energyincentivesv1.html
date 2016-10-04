@@ -35,7 +35,7 @@
 
     myConnector.getData = function (table, doneCallback) {
         //add your connection data
-        var url = 'http://developer.nrel.gov/api/energy_incentives/v2/dsire.json?api_key= //add key, address, and technologies
+        var url = 'http://developer.nrel.gov/api/energy_incentives/v2/dsire.json?api_key=' //add key, address, and technologies
         $.getJSON(url, function(resp) {
             var feat = resp.result
             tableau.log(feat)
@@ -66,8 +66,7 @@
         var key = document.getElementById("key").value;
         if (address,tech,key) {
 					//add place to pass connection data to connector object
-                    tableau.connectionName = "EnergyIncentivesSearch";
-                    tableau.submit();
+                   
                 };
         });
     });
